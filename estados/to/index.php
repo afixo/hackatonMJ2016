@@ -113,9 +113,9 @@ if ($id_orgaos){
             </div>            
         </header>
     	<article style="padding-top:40px">
-            <?php
-            require('../../includes/menu-cidade.php');             
-            ?>          	
+              <?php
+             require('../../includes/menu.php');             
+             ?>          	
             <div style="height:65px;  overflow:hidden; width:320px; margin:0 auto; padding-top:8px; background:#FFC; position:fixed; z-index:9998">
                 <div style='font-weight:bold; font-size:1.2em; padding-left:10px; padding-top:0px; padding-right:5px;'>
 					<form id="frmConveniosProgramas" name="frmConveniosProgramas" action="" method="post" enctype="multipart/form-data">
@@ -124,7 +124,7 @@ if ($id_orgaos){
 					if (!$NM_MUNICIPIO_PROPONENTE){	
 						echo 'Informe a cidade que deseja conhecer e fiscalizar os convênios e transferências da União.<span style="color:#5D9CC1; float:right;"><small style="padding-right:5px; padding-top:5px">'.$gestor->retornarEstados($pasta,'sigla')->nome.'</small></span>';
 					} else {					
-						echo 'Selecione o convênios e transferências da União que deseja conhecer e fiscalizar. <span style="color:#5D9CC1; float:right; padding-right:5px; padding-top:5px"><small style="padding-right:5px; padding-top:5px">'. ucfirst(strtolower(utf8_encode($NM_MUNICIPIO_PROPONENTE))) . ', '.utf8_encode($gestor->retornarEstados($pasta,'sigla')->nome).'</small></span>';
+						echo 'Selecione o convênios e transferências da União que deseja conhecer e fiscalizar. <span style="color:#5D9CC1; float:right; padding-right:5px; padding-top:5px"><small style="padding-right:5px; padding-top:5px">'. ucfirst(strtolower($NM_MUNICIPIO_PROPONENTE)) . ', '.$gestor->retornarEstados($pasta,'sigla')->nome.'</small></span>';
 				    }
 					?>														
 						<input type="hidden" id="NM_MUNICIPIO_PROPONENTE" name="NM_MUNICIPIO_PROPONENTE" value="<?=$NM_MUNICIPIO_PROPONENTE?>"/>

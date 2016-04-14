@@ -1,0 +1,46 @@
+--------------------
+enfrentamento da corrupção
+
+
+
+
+---------------------
+
+
+PROTÓTIPO FUNCIONAL
+
+	ok - voltar com o orgão selecionado (dar um post de volta para o form)
+	- importar mais dados [ programas e ]
+	- arquivos includes de filtro (filtro_estado.php { texto filtrando o menu }, filtro_cidade.php, )
+	
+	- avaliar
+	- comentar
+	- compartilhar facebook
+	
+GITHUB
+	- subir os arquivos para o servidor
+	- gerar link para inscrição
+
+VIDEO
+	- fazer o vídeo de 2 minutos
+	- video minha cidade e denuncio antigos...
+	
+	1 - logomarca
+	2 - contar uma historia ( Foto de uma pessoa de frente a uma plaquinha de obras ) explicando o problema...
+	3 - solução (vender os beneffícios) 
+	4 - mercado (alvo e inserido)
+	5 - telas como funciona
+	6 - vantagens
+	7 - time (citar a multidisliplinaridade)
+	8 - status e metas (dizer o que se tem desenvolvido e o que ainda queremos fazer, citar a importação de 60% dos dados e que a meta e finalizar os 100%)
+	9 - agradecimentos
+	
+
+EQUIPE
+	- confirmar equipe (Carlos, Flávio , Géssica)
+	
+	
+	
+INSCRIÇÃO
+	- Re-ler o edital
+	- concorrer

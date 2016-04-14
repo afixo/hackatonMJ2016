@@ -14,30 +14,37 @@ require('classes/db.php');
 require('classes/util/util.php');
 require("classes/models/Estados.php"); 
 require("classes/models/Programas.php"); 
+require("classes/models/ConveniosProgramas.php"); 
+require("classes/models/Avaliacoes.php"); 
 
 } elseif (file_exists('../classes/db.php')){
 require('../classes/db.php');
 require('../classes/util/util.php');
 require("../classes/models/Estados.php"); 
 require("../classes/models/Programas.php"); 
-
+require("../classes/models/ConveniosProgramas.php"); 
+require("../classes/models/Avaliacoes.php"); 
 } else {
 require('../../classes/db.php');
 require('../../classes/util/util.php');
 require("../../classes/models/Estados.php"); 
 require("../../classes/models/Programas.php"); 
-
+require("../../classes/models/ConveniosProgramas.php"); 
+require("../../classes/models/Avaliacoes.php"); 
 } 
 class Gestor {
 
 	public $db;
 	private $estados;
 	private $programas;
-
+	private $conveniosProgramas;
+	private $avaliacoes;
+	
 	public function __construct() {
 		$this->estados = new Estados();
 		$this->programas = new Programas();
-
+		$this->conveniosProgramas = new ConveniosProgramas();
+		$this->avaliacoes = new Avaliacoes();
 			$this->db = new DB(array(metodo=>1));
 			$this->db->conectar();
 		
@@ -50,6 +57,47 @@ class Gestor {
 			$this->db->montaOptionsSelect($tabela, $nomeExibicao, $selecionado, $ordenacao = '', $ordenacao_tipo = '',  $remover = '');
 
 		}
+
+
+	// SETOR REFERENTE AS CLASSES DA TABELA ESTADOS
+
+	public function retornarAvaliacoes($id, $campo = 'id', $tabela = 'avaliacoes', $ordenadoPor = '', $order = '', $limit = '') {
+		$retorno = $this->avaliacoes->retornar($id, $campo , $tabela, $ordenadoPor, $order, $limit);
+					
+		if($retorno) {
+			return $retorno;
+		} else {
+			return false;
+		}
+	}
+	public function inserirAvaliacoes($objeto) {
+		$retorno = $this->avaliacoes->inserir($objeto);
+				 
+		if($retorno) {
+			return $retorno;
+		} else {
+			return false;
+		}
+	}
+	public function editarAvaliacoes($objeto,$campo = 'id') {
+		$retorno = $this->avaliacoes->editar($objeto,$campo);
+				 
+		if($retorno) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+	public function excluirAvaliacoes($valor,$campo = 'id') {
+		$retorno = $this->avaliacoes->excluir($valor,$campo) ;
+
+				 
+		if($retorno) {
+				return true;
+		} else {
+			return false;
+		}
+	}
 
 
 	// SETOR REFERENTE AS CLASSES DA TABELA ESTADOS
@@ -92,6 +140,46 @@ class Gestor {
 		}
 	}
 
+
+	// SETOR REFERENTE AS CLASSES DA TABELA CONVENIOS PROGRAMAS
+
+	public function retornarConveniosProgramas($id, $campo = 'id', $tabela = 'convenios_programas', $ordenadoPor = '', $order = '', $limit = '') {
+		$retorno = $this->conveniosProgramas->retornar($id, $campo , $tabela, $ordenadoPor, $order, $limit);
+					
+		if($retorno) {
+			return $retorno;
+		} else {
+			return false;
+		}
+	}
+	public function inserirConveniosProgramas($objeto) {
+		$retorno = $this->conveniosProgramas->inserir($objeto);
+				 
+		if($retorno) {
+			return $retorno;
+		} else {
+			return false;
+		}
+	}
+	public function editarConveniosProgramas($objeto,$campo = 'id') {
+		$retorno = $this->conveniosProgramas->editar($objeto,$campo);
+				 
+		if($retorno) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+	public function excluirConveniosProgramas($valor,$campo = 'id') {
+		$retorno = $this->conveniosProgramas->excluir($valor,$campo) ;
+
+				 
+		if($retorno) {
+				return true;
+		} else {
+			return false;
+		}
+	}
 
 	// SETOR REFERENTE AS CLASSES DA TABELA PROGRAMAS
 

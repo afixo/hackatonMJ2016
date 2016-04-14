@@ -95,8 +95,8 @@ if ($resultado){
               <?php
              require('../includes/menu.php');             
              ?>          	
-            <div style="height:52px; width:320px; margin:0 auto; padding-top:8px; background:#FFC; position:fixed; z-index:9998">
-                <h2>Deseja conhecer e fiscalizar os programas de qual estado?</h2>
+            <div style="height:65px; width:320px; margin:0 auto; padding-top:1px;   font-size:1em; padding-left:0px; background:#FFC; position:fixed; z-index:9998">
+                <h2 style='padding-left:0; margin-left:10px; line-height:1.4'>Informe o estado que deseja conhecer e fiscalizar os convênios e transferências da União.</h2>
             </div>
             
 	        <ul class="lista" id="lista" style='margin-top:50px' data-role="listview">
@@ -106,7 +106,8 @@ if($resultado){
 	for($i=0; $i <= count($resultado) ; $i++) {  
 		
 		
-		$objProgramas = $gestor->retornarProgramas(array($resultado[$i]->sigla,'DISPONIBILIZADO'),array('UF_HABILITADA','TX_SITUACAO_PROGRAMA'),'programas');
+		//$objProgramas = $gestor->retornarConveniosProgramas($resultado[$i]->sigla,'UF_PROPONENTE','convenios_programas');
+		//$objProgramas = $gestor->retornarConveniosProgramas($pasta, 'UF_PROPONENTE','convenios_programas');
 		$quantidade = 0;
 		if ($objProgramas){
 			$quantidade = count($objProgramas);
@@ -114,7 +115,7 @@ if($resultado){
 		
 		
 	?>                 
-            	<li onclick="document.location.href='<?=strtolower($resultado[$i]->sigla)?>/';"><span style='float:left; margin-top:8px'><?=utf8_encode($resultado[$i]->nome)?><a style="display:none"><?=$util->removeAcentos($resultado[$i]->nome,1)?></a></span><div style="background:#fff; border:1px sollid #333; border-radius:30%; min-width:30px; padding:5px; height:30px; float:right; margin-right:5px"><span style='width:100%; text-align:center; display:block; margin-top:3px'><?=$quantidade?></span></div></li>
+            	<li style='padding-top:22px; min-height:63px;' onclick="document.location.href='<?=strtolower($resultado[$i]->sigla)?>/';"><span style='float:left; margin-top:8px'><?=utf8_encode($resultado[$i]->nome)?><a style="display:none"><?=$util->removeAcentos($resultado[$i]->nome,1)?></a></span></li>
 	  <?php 
 	  
 	} 

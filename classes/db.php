@@ -20,7 +20,7 @@ class DB {
 			if ($this->servidor == 0) {
 				$this->db = new PDO("mysql:host=127.0.0.1;dbname=corrupcao", 'root', 'afixo');
 			} else {
-				$this->db = new PDO("mysql:host=127.0.0.1;dbname=afixoco_locadora", 'afixoco_padrao', 'afixo2014');
+				$this->db = new PDO("mysql:host=127.0.0.1;dbname=afixoco_mj", 'afixoco_padrao', 'afixo2014');
 			}				
 			$this->db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);                
 		}	

@@ -1,0 +1,186 @@
+/*
+ *  Brasil Transparente
+ * -------------------------- */
+
+
+
+
+/* fixando a navbar em modo mobile */
+body {
+	padding-top:70px;
+}
+
+.navbar-header {
+  float: none;
+  
+}
+.navbar-toggle {
+  display: block;
+}
+.navbar-collapse {
+  border-top: 1px solid transparent;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+}
+.navbar-collapse.collapse {
+  display: none!important;
+}
+.navbar-nav {
+  float: none!important;
+  margin: 7.5px -15px;
+  
+}
+.navbar-nav>li {
+  float: none;
+}
+.navbar-nav>li>a {
+  padding-top: 10px;
+  padding-bottom: 10px;  
+  padding-left: 30px;
+}
+.navbar-collapse.collapse.in {display: block !important; }
+
+
+
+
+/* */
+.legenda{
+	background-color: #fff;
+	color:#ccc; border:0;
+	font-weight:bold;
+	padding-top:8px;
+	margin-left: -3px;
+}
+
+
+/* página sobre */
+
+.sobre-div-informacoes {
+	width:100%; display:block; min-height:70px; overflow:hidden;
+}
+.sobre-div-informacoes .well{
+	width:50px; height:50px; border-radius:50%; float:left; margin-right:10px
+}
+
+.sobre-btn{
+	padding-top:10px;	
+	padding-bottom:10px;
+	background:#286090;
+	border:#000;
+		
+
+}
+#lista {
+	padding-left: 0
+}
+#lista li {
+	list-style:none;
+	padding-left: 0;
+	padding-bottom: 30px
+}
+
+
+/*==========  Mobile First Method  ==========*/
+
+/* Custom, iPhone Retina */ 
+@media only screen and (min-width : 320px) {
+
+	.sobre-div-informacoes {
+		font-size:0.95em;
+	}	
+	.sobre-div-informacoes .well{
+		margin-top:5px;
+	}	
+	
+	.sobre-div-informacoes p {
+		font-size:0.9em;
+	}	
+	
+	.sobre-div-informacoes p.entenda {
+		padding-top:8px;
+		font-size:0.9em;
+	}	
+	.sobre-h4{
+		margin-top:5px;	
+		margin-bottom:5px;
+		font-size:1em;
+		font-weight:bold;
+	}	
+	#estado, #cidade, #tx_modalidade, #tx_situacao, #filtro {
+		width:100%; background:#ddd; display:block; padding-top:15px; padding-bottom:13px; height:40px
+	}
+	#filtro {
+		width:100%; background:#ddd; display:block;  height:40px
+	}		
+}
+
+/* Extra Small Devices, Phones */ 
+@media only screen and (min-width : 480px) {
+
+	.sobre-div-informacoes {
+		font-size:0.95em;
+	}	
+	.sobre-div-informacoes .well{
+		margin-top:5px;
+	}	
+
+	.sobre-div-informacoes p {		
+		font-size:0.9em;
+	}
+	.sobre-div-informacoes p.entenda {
+		padding-top:10px;
+		font-size:0.9em;
+	}		
+	.sobre-h4{
+		margin-top:5px;	
+		margin-bottom:5px;
+		font-size:1em;
+		font-weight:bold;
+	}		
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+
+	.sobre-div-informacoes p {
+		padding-top:30px;
+		font-size:1em;
+	}
+	.sobre-div-informacoes p.entenda {
+		padding-top:30px;
+		font-size:0.9em;
+	}	
+	.sobre-h4{
+		margin-top:10px;	
+		margin-bottom:-24px;
+		font-size:1em;
+		font-weight:bold;
+	}	
+
+	.sobre-div-informacoes {
+		font-size:1em;
+	}	
+	.sobre-div-informacoes .well{
+		margin-top:0px;
+	}		
+	#estado, #cidade, #tx_modalidade, #tx_situacao, #filtro {
+		width:100%; background:#ddd; display:block; padding-top:15px; padding-bottom:13px; height:60px
+	}
+	
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+	.sobre-div-informacoes p {
+		padding-top:30px;
+		font-size:1em;
+	}
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+	.sobre-div-informacoes p {
+		padding-top:30px;
+		font-size:1em;
+	}
+}
